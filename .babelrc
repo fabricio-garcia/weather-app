@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "13.9.0",
+          "esmodules": false
+        }
+      }
+    ]
+  ]
+}
