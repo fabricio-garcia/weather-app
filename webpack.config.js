@@ -8,12 +8,12 @@ module.exports = {
   target: 'node',
 
   entry: {
-    app: path.resolve(__dirname, 'src', 'index.js'),
+    app: path.resolve(__dirname, 'src/js', 'index.js'),
   },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'assets/bundle.js',
   },
 
   externals: [nodeExternals()],
