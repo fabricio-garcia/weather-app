@@ -4,7 +4,9 @@
   "description": "A weather forecast app using the weather API and created with Vanilla JS",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --mode=development",
+    "start": "webpack-dev-server -d --open",
+    "watch": "nodemon dist/js/bundle.js",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
@@ -40,6 +42,7 @@
     "url-loader": "^4.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-node-externals": "^1.7.2"
   }
 }
