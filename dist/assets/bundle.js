@@ -152,7 +152,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _wea
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Weather; });\nclass Weather {\n  constructor(city, countryCode) {\n    this.apikey = 'fc90a33d5572be994fe2d75730811e33';\n    this.city = city;\n    this.countryCode = countryCode;\n  }\n\n  async getWeather() {\n    const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=metric`;\n    const response = await fetch(URI);\n    const data = response.json();\n    return data;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Weather; });\nclass Weather {\n  constructor(city, countryCode) {\n    this.apiKey = 'fc90a33d5572be994fe2d75730811e33';\n    this.city = city;\n    this.countryCode = countryCode;\n  }\n\n  async getWeather() {\n    const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=metric`;\n    const response = await fetch(URI);\n    const data = response.json();\n    return data;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/weather.js?");
 
 /***/ })
 
