@@ -74,7 +74,7 @@ and go to http://localhost:8080/
 
 # Live Demo
 
-[Link](#)
+[http://weather-app-dev.surge.sh/](http://weather-app-dev.surge.sh/)
 
 # Author
 
