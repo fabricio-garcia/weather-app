@@ -11,4 +11,9 @@ export default class Weather {
     const data = response.json();
     return data;
   }
+
+  searchLocation(city, countryCode) {
+    this.city = city;
+    this.countryCode = countryCode;
+  }
 }
