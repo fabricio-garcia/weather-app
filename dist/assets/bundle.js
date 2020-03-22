@@ -132,6 +132,18 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 
 /***/ }),
 
+/***/ "./src/js/dom.js":
+/*!***********************!*\
+  !*** ./src/js/dom.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Dom; });\nclass Dom {\n  constructor() {\n    this.location = document.getElementById('weather-location');\n    this.description = document.getElementById('weather-description');\n    this.string = document.getElementById('weather-string');\n    this.humidity = document.getElementById('weather-humidity');\n    this.wind = document.getElementById('weather-wind');\n  }\n\n  render(weather) {\n    this.location.textContent = `${weather.name} / ${weather.sys.country}`;\n    this.description.textContent = weather.weather[0].description;\n    this.string.textContent = `${weather.main.temp} °C`;\n    this.humidity.textContent = `Humidity: ${weather.main.humidity}°C`;\n    this.wind.textContent = `Weather ${weather.wind.speed} m/s`;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/dom.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -140,7 +152,19 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/js/weather.js\");\n\n\n__webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n\nconst weather = new _weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('London', 'uk');\n\nasync function fetchWeather() {\n  const data = await weather.getWeather();\n  console.log(data);\n}\n\ndocument.addEventListener('DOMContentLoaded', fetchWeather);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _weather__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./weather */ \"./src/js/weather.js\");\n/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dom */ \"./src/js/dom.js\");\n/* harmony import */ var _localStorage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./localStorage */ \"./src/js/localStorage.js\");\n\n\n\n\n__webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n\nconst dom = new _dom__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nconst localStorage = new _localStorage__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nconst {\n  city,\n  countryCode\n} = localStorage.getLocationData();\nconst weather = new _weather__WEBPACK_IMPORTED_MODULE_0__[\"default\"](city, countryCode);\n\nasync function fetchWeather() {\n  const data = await weather.getWeather();\n  dom.render(data);\n}\n\ndocument.getElementById('search-location').addEventListener('click', evt => {\n  evt.preventDefault();\n  const city = document.getElementById('city').value;\n  const countryCode = document.getElementById('country-code').value;\n  weather.searchLocation(city, countryCode);\n  localStorage.setLocationData(city, countryCode);\n  fetchWeather();\n});\ndocument.addEventListener('DOMContentLoaded', fetchWeather);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/localStorage.js":
+/*!********************************!*\
+  !*** ./src/js/localStorage.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return LocalStorage; });\nclass LocalStorage {\n  constructor() {\n    this.defaultCity = 'Mexico City';\n    this.defaultCountry = 'mx';\n  }\n\n  getLocationData() {\n    if (localStorage.getItem('city') === null) {\n      this.city = this.defaultCity;\n    } else {\n      this.city = localStorage.getItem('city');\n    }\n\n    if (localStorage.getItem('countryCode') === null) {\n      this.countryCode = this.defaultCity;\n    } else {\n      this.countryCode = localStorage.getItem('countryCode');\n    }\n\n    return {\n      city: this.city,\n      countryCode: this.countryCode\n    };\n  }\n\n  static setLocationData(city, countryCode) {\n    localStorage.setItem('city', city);\n    localStorage.setItem('countryCode', countryCode);\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/localStorage.js?");
 
 /***/ }),
 
@@ -152,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _wea
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Weather; });\nclass Weather {\n  constructor(city, countryCode) {\n    this.apiKey = 'fc90a33d5572be994fe2d75730811e33';\n    this.city = city;\n    this.countryCode = countryCode;\n  }\n\n  async getWeather() {\n    const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=metric`;\n    const response = await fetch(URI);\n    const data = response.json();\n    return data;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/weather.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Weather; });\nclass Weather {\n  constructor(city, countryCode) {\n    this.apiKey = 'fc90a33d5572be994fe2d75730811e33';\n    this.city = city;\n    this.countryCode = countryCode;\n  }\n\n  async getWeather() {\n    const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=metric`;\n    const response = await fetch(URI);\n    const data = response.json();\n    return data;\n  }\n\n  searchLocation(city, countryCode) {\n    this.city = city;\n    this.countryCode = countryCode;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/js/weather.js?");
 
 /***/ })
 

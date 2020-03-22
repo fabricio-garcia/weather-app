@@ -57,6 +57,7 @@
 - `npm`
 - Webpack
 - Visual Studio Code
+- GitKraken
 - Linux/GNU
 - Love and Passion for code
 
@@ -66,6 +67,7 @@ Run this commands: <br>
 `git clone git@github.com:fabricio-garcia/weather-app.git` <br>
 `cd weather-app` <br>
 `npm install` <br>
+`npm run build` <br>
 `npm run start` <br>
 
 and go to http://localhost:8080/

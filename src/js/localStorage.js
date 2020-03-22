@@ -23,6 +23,7 @@ export default class LocalStorage {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
   setLocationData(city, countryCode) {
     localStorage.setItem('city', city);
     localStorage.setItem('countryCode', countryCode);
