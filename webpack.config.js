@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const NodemonPlugin = require('nodemon-webpack-plugin');
