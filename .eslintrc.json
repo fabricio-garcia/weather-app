@@ -16,6 +16,10 @@
       "arrow-parens": "off"
     },
     "settings": {
-      "import/resolver": "webpack"
+      "import/resolver": {
+        "node": {
+          "paths": ["src"]
+        }
+      }
     }
   }
