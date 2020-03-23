@@ -7,11 +7,19 @@ export default class Dom {
     this.wind = document.getElementById('weather-wind');
   }
 
-  render(weather) {
+  renderCelsius(weather) {
     this.location.textContent = `${weather.name} / ${weather.sys.country}`;
     this.description.textContent = weather.weather[0].description;
     this.string.textContent = `${weather.main.temp} °C`;
     this.humidity.textContent = `Humidity: ${weather.main.humidity}°C`;
+    this.wind.textContent = `Weather ${weather.wind.speed} m/s`;
+  }
+
+  renderFahrenheit(weather) {
+    this.location.textContent = `${weather.name} / ${weather.sys.country}`;
+    this.description.textContent = weather.weather[0].description;
+    this.string.textContent = `${weather.main.temp} °F`;
+    this.humidity.textContent = `Humidity: ${weather.main.humidity}°F`;
     this.wind.textContent = `Weather ${weather.wind.speed} m/s`;
   }
 }

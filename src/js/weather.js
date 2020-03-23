@@ -5,8 +5,15 @@ export default class Weather {
     this.countryCode = countryCode;
   }
 
-  async getWeather() {
+  async getWeatherCelsius() {
     const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=metric`;
+    const response = await fetch(URI);
+    const data = response.json();
+    return data;
+  }
+
+  async getWeatherFahrenheit() {
+    const URI = `https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.countryCode}&appid=${this.apiKey}&units=imperial`;
     const response = await fetch(URI);
     const data = response.json();
     return data;
