@@ -36,6 +36,8 @@
   </p>
 </p>
 
+![weather_app](src/img/weather_app.png)
+
 # Specifications
 
 - Asynchronous JavaScript and APIs
