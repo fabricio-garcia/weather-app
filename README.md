@@ -78,6 +78,10 @@ and go to http://localhost:8080/
 
 [http://weather-app-dev.surge.sh/](http://weather-app-dev.surge.sh/)
 
+# Automated tests
+
+No automated tests for this project have been implmented but it is something that should eventually be added
+
 # Author
 
 👨 [Fabricio Garcia](https://github.com/fabricio-garcia)
