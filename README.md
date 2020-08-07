@@ -15,7 +15,7 @@
 
 # weather-app
 
-> Weather App
+> A Weather App build with Vanilla JS
 
 </br>
 <div align="center">
@@ -94,7 +94,7 @@ and go to http://localhost:8080/
 
 - No automated tests for this project have been implemented but it is something that should eventually be added.
 
-# Authors
+# Author
 
 👤 **Fabricio Garcia**
 
