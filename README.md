@@ -13,91 +13,108 @@
 [![Issues-open][issues-open-shield]][issues-open-url]
 [![Issues-closed][issues-closed-shield]][issues-closed-url]
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://www.microverse.org/">
-    <img src="/src/img/microverse.png" alt="Logo" width="80" height="80">
-  </a>
+# weather-app
 
-  <h1 align="center">
-	Weather App
-  </h1>
+> Weather App
 
-  <p align="center">
-    A weather forecast app using the weather API and created with Vanilla JS
-    <br />
-	  🖊️
-    <a href="https://www.theodinproject.com/courses/javascript/lessons/weather-app">Assigment</a>
-    🐞
-    <a href="https://github.com/fabricio-garcia/weather-app/issues">Report a Bug</a>
-    🙋‍♂️
-    <a href="https://github.com/fabricio-garcia/weather-app/issues">Request Feature</a>
-  </p>
-</p>
+</br>
+<div align="center">
+    <img src="weather-app.gif">
+    <a href="http://weather-app-dev.surge.sh/"><h1 width="90">Weather App</h1></a>
+</div>
 
-![weather_app](src/img/weather_app.png)
+# Table of Contents
 
-# Specifications
+- [About](#about)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Available scripts](#available-scripts)
+- [Live Demo](#live-demo)
+- [Built With](#built-with)
+- [Tests](#tests)
+- [Authors](#authors)
+- [Contributing](#contributing)
+- [Show your support](#show-your-support)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
-- Asynchronous JavaScript and APIs
-- Data Structures
-- Object Oriented Programming
-- Factory Functions
-- Object destructuring
-- Module Pattern
+# About
 
-# Features
+The Weather App project tests asynchronous communication with promises or async/await and when to use them.
 
-- Basic VanillaJS app with a single script or few commands
-- JS modules and ES6+
-- Stickler CI
-- ESLint - Pluggable JavaScript linter
+# Getting Started
 
-# Built With
+> To get a local copy up and running follow these simple example steps:
+
+## Prerequisites
 
 - `npm`
-- Webpack
-- Visual Studio Code
-- GitKraken
-- Linux/GNU
-- Love and Passion for code
+- `git`
 
-## Getting Started
+## Setup
 
-Run this commands: <br>
+To install the game locally
+
 `git clone git@github.com:fabricio-garcia/weather-app.git` <br>
 `cd weather-app` <br>
-`npm install` <br>
-`npm run build` <br>
-`npm run start` <br>
+
+```javascript
+npm i
+```
+
+- Start the game in your browser by typing:
+
+```javascript
+npm run start
+```
 
 and go to http://localhost:8080/
 
+## Available scripts
+
+- `npm run start`: Runs the app in the development mode.
+
+- `npm run build`: Builds the app for production to the build folder.
+
 # Live Demo
 
-[http://weather-app-dev.surge.sh/](http://weather-app-dev.surge.sh/)
+[Weather App live](https://weather-app-dev.surge.sh)
 
-# Automated tests
+# Built With
 
-No automated tests for this project have been implmented but it is something that should eventually be added
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Babel](https://babeljs.io/)
+- [WebPack](https://webpack.js.org/)
+- [VS Code](https://code.visualstudio.com/)
+- [Kubuntu](https://kubuntu.org/)
+- Love and Passion for code
 
-# Author
+# Tests
 
-👨 [Fabricio Garcia](https://github.com/fabricio-garcia)
+- No automated tests for this project have been implemented but it is something that should eventually be added.
+
+# Authors
+
+👤 **Fabricio Garcia**
+
+- Github: [@fabricio-garcia](https://github.com/fabricio-garcia)
+- Twitter: [@this_fab](https://twitter.com/this_fab)
+- LinkedIn: [@fabricio-garcia](https://linkedin.com/fabricio-garcia)
 
 # Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues and feature requests are welcome! 🤝
 
-# Acknowledgements
-
-- [Microverse](https://www.microverse.org/)
-- [The Odin Project](https://www.theodinproject.com/)
+Feel free to check the [issues page](issues/).
 
 # Show your support
 
 Give a ⭐️ if you like this project!
+
+# Acknowledgments
+
+- [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 # License
 
