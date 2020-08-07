@@ -54,7 +54,7 @@ The Weather App project tests asynchronous communication with promises or async/
 
 ## Setup
 
-To install the game locally
+To install the app locally
 
 `git clone git@github.com:fabricio-garcia/weather-app.git` <br>
 `cd weather-app` <br>
@@ -106,7 +106,7 @@ and go to http://localhost:8080/
 
 Contributions, issues and feature requests are welcome! 🤝
 
-Feel free to check the [issues page](issues/).
+You can also check the [issues page](issues/).
 
 # Show your support
 
