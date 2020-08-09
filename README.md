@@ -99,7 +99,7 @@ and go to http://localhost:8080/
 👤 **Fabricio Garcia**
 
 - Github: [@fabricio-garcia](https://github.com/fabricio-garcia)
-- Twitter: [@this_fab](https://twitter.com/this_fab)
+- Twitter: [@fabgrel10](https://twitter.com/fabgrel10)
 - LinkedIn: [@fabricio-garcia](https://linkedin.com/fabricio-garcia)
 
 # Contributing
